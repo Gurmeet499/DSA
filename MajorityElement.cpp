@@ -59,6 +59,18 @@ int majorityElment(vector<int> nums){
             freq--;
         }
     }
+    // this extra code is for if majority elment doesnot exists
+    
+    int count =0;
+    for(int val : nums){
+        if(val == ans){
+            count++;
+        }
+    }
+    if(count > n/2) => ans;
+    else => -1;
+
+    
    return ans;
 }
 
