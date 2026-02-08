@@ -23,6 +23,12 @@ int gcdrec(int a,int b){
     return gcdrec(b,a % b);
 }
 
+// find least common divisor
+int lcm(int a, int b){
+    int gcd = gcdrec(a,b);
+    return (a*b)/gcd;
+}
+
 
 int main(){
   cout<<gcd(20,28)<<endl;
