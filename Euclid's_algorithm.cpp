@@ -16,6 +16,14 @@ int gcd(int a, int b){
 }
 
 
+//recursion code
+int gcdrec(int a,int b){
+    //base case
+    if(b == 0) return a;
+    return gcdrec(b,a % b);
+}
+
+
 int main(){
   cout<<gcd(20,28)<<endl;
 
