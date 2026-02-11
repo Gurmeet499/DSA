@@ -2,7 +2,20 @@
 using namespace std;
 
 double mypow(double x,int n){
+
+    if(n == 0){
+        return 1.0;
+    }
+    if( x == 0) return 0.0;
+    if( x == 1) return 1.0;
+    if( x == -1.0 && n%2 ==0) return 1.0;
+    if( x == -1.0 && n%2 != 0 ) return -1.0; 
+
     long binform = n;
+    if(n<0){
+        x = 1/x;
+        binform = -binform;
+    }
     double ans =1;
 
     while(binform > 0){
@@ -13,8 +26,8 @@ double mypow(double x,int n){
         binform /= 2;
     }
 
-   return binform;
+   return ans;
 }
 int main(){
     cout<<mypow(2,3)<<endl;
-}
+}        
